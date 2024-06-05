@@ -15,8 +15,12 @@ BaselineOfWebSocketExample >> baseline: spec [
 	
 	spec for: #'common' do: [
 		self zinc: spec.
-		spec package: #'Websocket-Example' with: [ spec requires: 'ZincHTTPComponentsWebSocket' ]
-	]
+		spec package: #'Websocket-Example' with: [ spec requires: 'ZincHTTPComponentsWebSocket'].
+						
+		spec 
+			group: 'all' with: #('Websocket-Example');
+			group: 'default' with: #('all')
+	 ]
 ]
 
 { #category : 'baselines' }
