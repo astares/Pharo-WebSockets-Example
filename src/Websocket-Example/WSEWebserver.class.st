@@ -91,7 +91,9 @@ WSEWebserver >> initServer [
 		customDelegate
 			map: '/' to: 'index.html';
 			map: 'index.html' to: [:request | ZnResponse ok: (ZnEntity html: self indexHTML) ];
-			map: 'websocket.js' to: [:request | ZnResponse ok: (ZnEntity js: self websocketJS) ].
+			map: 'websocket.js' to: [:request | ZnResponse ok: (ZnEntity js: self websocketJS) ];
+			map: 'chat' to: (ZnWebSocketDelegate map: 'chat' to: WSEChatHandler new)
+			.
 	server delegate: customDelegate.
 ]
 
