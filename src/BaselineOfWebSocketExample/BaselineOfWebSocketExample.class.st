@@ -4,8 +4,8 @@ Baseline for [https://github.com/astares/Pharo-WebSockets-Example](https://githu
 Class {
 	#name : 'BaselineOfWebSocketExample',
 	#superclass : 'BaselineOf',
-	#category : 'BaselineOfWebsocketExample-Base',
-	#package : 'BaselineOfWebsocketExample',
+	#category : 'BaselineOfWebSocketExample-Base',
+	#package : 'BaselineOfWebSocketExample',
 	#tag : 'Base'
 }
 
